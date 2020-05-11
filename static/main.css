@@ -1,0 +1,29 @@
+ body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #445544;
+  }
+  
+  table.table tr{
+    background-color: #b0b5b8;
+  }
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  form {
+    text-align: center;
+  }
+  .post-body {
+    white-space: pre-line;
+  }
+  .post-title {
+    color: #a8885f;
+  }

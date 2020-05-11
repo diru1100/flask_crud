@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    {% if form %}
+    <div class = "col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+        <h1>{{type}}</h1>
+        <form action="" method="post" class="col-md-4 ">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.title.label }}<br>
+                {{ form.title(cols=32, rows=1) }}<br>
+                {% for error in form.title.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+                {{ form.body.label }}<br>
+                {{ form.body(cols=32, rows=4) }}<br>
+                {% for error in form.body.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+    <hr>
+    {% else %}
+    <h1>Posts created:</h1>
+    {% endif %}
+    
+    {% for post in posts %}
+        {% include '_post.html' %}
+    {% endfor %}
+    {% if prev_url %}
+    <a href="{{ prev_url }}">Newer posts</a>
+    {% endif %}
+    {% if next_url %}
+    <a href="{{ next_url }}">Older posts</a>
+    {% endif %}
+{% endblock %}

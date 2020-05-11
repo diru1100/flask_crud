@@ -1,0 +1,18 @@
+    <table class="table">
+        <div class="container" >
+            
+            <tr >
+                <td bgcolor="a8885f" style="opacity: 0.8;"> {{ post.id }}) {{ post.title }} </td><br>
+            </tr>
+            <tr>
+                <td bgcolor="b0b5b8"> <p class="post-body">{{ post.body }}</p></td>
+            </tr>
+            <tr>
+                <td> 
+                    <a href="{{'%s/edit'%post.id}}"> Edit {{post.id}} </a> 
+                    <a href="{{'%s/delete'%post.id}}"> Delete {{post.id}} </a> 
+                </td>
+            </tr> 
+        </div>  
+    </table>
+    
